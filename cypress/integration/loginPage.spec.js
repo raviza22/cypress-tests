@@ -28,7 +28,7 @@ describe('Swag Labs login page tests', function() {
         cy.get('.bot_column').should('exist')
     })
 
-    it.only('should verify locked user error', function () {
+    it('should verify locked user error', function () {
         loginPage.enterUsername(this.data.invalidUser)
         loginPage.enterPassword(this.data.password)
         loginPage.clickLogin()
