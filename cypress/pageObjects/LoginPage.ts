@@ -7,11 +7,11 @@ export class LoginPage {
     }
 
     enterUsername(user) {
-        cy.get('[data-test=username]').type(user)
+        cy.get('[data-test=username]').type('{selectall}{backspace}' + user)
     }
 
     enterPassword(pwd) {
-        cy.get('[data-test=password]').type(pwd)
+        cy.get('[data-test=password]').type('{selectall}{backspace}' + pwd)
     }
 
     clickLogin() {

@@ -16,10 +16,6 @@ describe('Swag Labs login page tests', function() {
         })
     })
 
-    it('should verify page title', function() {
-        assert(cy.title(), 'Swag Labs', "Title mismatched")
-    })
-
     it('should verify logo display', function() {
         cy.get('.login_logo').should('exist')
     })
@@ -37,7 +33,7 @@ describe('Swag Labs login page tests', function() {
         cy.get('[data-test=error]').should('contain', 'Sorry, this user has been locked out.')
     })
     
-    it('should verify login', function() {
+    it('should verify successful login', function() {
         loginPage.enterUsername(this.data.username)
         loginPage.enterPassword(this.data.password)
         loginPage.clickLogin()
